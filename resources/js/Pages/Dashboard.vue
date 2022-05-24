@@ -105,9 +105,9 @@ function time_ago(time) {
         <div class="flex flex-col-reverse relative">
             <div style="height:calc(100vh - 130px)" class="w-full flex flex-col-reverse bg-gray-200 overflow-y-scroll">
                 <div v-for="message in messages.slice().reverse()" :key="message" :class="{'flex flex-row-reverse': Tuser.id == message.user.id}" class="m-2">
-                    <div class="flex flex-col px-2 py-1 rounded-lg shadow-md" :class="{'bg-gray-100 text-gray-500': Tuser.id == message.user.id, 'bg-gray-700 text-white': Tuser.id != message.user.id}">
+                    <div class="flex flex-col px-2 py-1 rounded-lg shadow-md" :class="{'bg-gray-100 text-gray-500': Tuser.id == message.user.id, 'bg-gray-700 text-gray-200': Tuser.id != message.user.id}">
                         <div :class="{'flex flex-row-reverse': Tuser.id == message.user.id}" class="flex justify-between w-full">
-                            <div :class="{'hidden': Tuser.id == message.user.id}" class="font-dosis text-lg">
+                            <div :class="{'hidden': Tuser.id == message.user.id}" class="font-dosis text-gray-200 text-lg">
                                 {{message.user.name}}
                             </div>
                         </div>
